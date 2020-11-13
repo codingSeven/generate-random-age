@@ -15,13 +15,14 @@ ngOnInit(){
        {name: 'Food', mass: 150},
        {name: 'Oxygen Tanks', mass: 400},
         ];
-
+        
+        this.equipmentItems=this.equipment;
         this.equipmentItems.forEach((arrayItem, index)=> {
-        this.equipmentItems[index].age=this.generateRandomInteger(20, 60);
+        this.equipmentItems[index].age=this.generateRandomAge(20, 60);
        });
 }
 
- generateRandomInteger(min, max) {
+ generateRandomAge(min, max) {
   return Math.floor(min + Math.random()*(max + 1 - min))
 }
 }
